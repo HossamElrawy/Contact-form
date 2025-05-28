@@ -1,0 +1,295 @@
+/* Reset and base styles */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+    font-family: "Karla";
+    background-color: hsl(148, 38%, 91%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8rem 22rem; /* 128px 352px */
+    position: relative;
+}
+
+/* Main container styles */
+main {
+    width: 100%;
+    background-color: white;
+    padding: 2.5rem; /* 40px */
+    border-radius: 0.875rem; /* 14px */
+    display: flex;
+    flex-direction: column;
+    min-width: fit-content;
+}
+
+/* Contact heading */
+.contact-para {
+    font-weight: 700;
+    color: hsl(187, 24%, 22%);
+    font-size: 1.875rem; /* 30px */
+}
+
+/* Layout grids */
+.first-last-div,
+.radio-option {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+/* Form field containers */
+.first-div,
+.last-div,
+.email-div,
+.query-type-div,
+.message-div,
+.consent-div {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Label styles */
+.first-label,
+.last-label,
+.email-label,
+.query-label,
+.meassge-label {
+    font-weight: 400;
+    color: hsl(187, 24%, 22%);
+}
+
+/* Required field indicator */
+.required-star {
+    color: hsl(169, 82%, 27%);
+}
+
+/* Input field styles */
+.first-input,
+.last-input,
+.email-input,
+.general-label,
+.support-label,
+.message-input {
+    height: 3.1875rem; /* 51px */
+    border-radius: 0.5rem; /* 8px */
+    padding: 0 1.4375rem; /* 0 23px */
+    border: 1px solid hsl(187, 24%, 22%);
+    cursor: pointer;
+    transition: border 0.3s ease;
+}
+
+/* Warning message styles */
+.warn-first,
+.warn-last,
+.warn-email,
+.warn-query,
+.warn-message,
+.warn-consent {
+    color: hsl(0, 66%, 54%);
+    display: none;
+}
+
+/* Spacing between sections */
+.contact-para,
+.first-last-div,
+.email-div,
+.query-type-div {
+    margin-bottom: 2rem; /* 32px */
+}
+
+/* Internal spacing for form groups */
+.first-div,
+.last-div,
+.email-div,
+.query-type-div,
+.message-div {
+    gap: 0.5rem; /* 8px */
+}
+
+.first-last-div,
+.radio-option,
+.consent-div {
+    gap: 1rem; /* 16px */
+}
+
+/* Radio and checkbox label styles */
+.general-label,
+.support-label,
+.consent-label {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem; /* 12px */
+    color: hsl(187, 24%, 22%);
+    cursor: pointer;
+}
+
+/* Textarea specific styles */
+.message-input {
+    height: 6.5625rem; /* 105px */
+    padding: 0.75rem; /* 12px */
+}
+
+/* Bottom margins for form sections */
+.message-div,
+.consent-div {
+    margin-bottom: 2.625rem; /* 42px */
+}
+
+/* Submit button styles */
+.submit-button {
+    width: 100%;
+    height: 3.6875rem; /* 59px */
+    font-family: "Karla";
+    border: none;
+    background-color: hsl(169, 82%, 27%);
+    border-radius: 0.5rem; /* 8px */
+    color: white;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Button hover state */
+.submit-button:hover {
+    background-color: hsl(169, 81%, 14%);
+}
+
+/* Utility class for showing elements */
+.show {
+    display: block;
+}
+
+/* Focus states */
+input:focus,
+textarea:focus {
+    outline: none;
+    border: 1px solid hsl(169, 82%, 27%);
+}
+
+/* Warning state for invalid inputs */
+.warn-input {
+    border: 1px solid hsl(0, 66%, 54%);
+}
+
+/* Placeholder styling */
+input::placeholder {
+    color: hsl(187, 24%, 22%);
+}
+
+/* Custom radio button styles */
+.general-input,
+.support-input {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  position: relative;
+  width: 1.5rem; /* 24px */
+  height: 1.5rem; /* 24px */
+  border: 2px solid #ccc;
+  border-radius: 50%;
+  vertical-align: middle;
+  cursor: pointer;
+  outline: none;
+}
+
+/* Checked radio button styles */
+.general-input:checked,
+.support-input:checked {
+  border: 2px solid hsl(169, 82%, 27%);
+}
+
+/* Custom radio button indicator */
+.general-input:checked::before,
+.support-input:checked::before {
+  content: "";
+  position: absolute;
+  top: 0.1875rem; /* 3px */
+  left: 0.1875rem; /* 3px */
+  width: 0.875rem; /* 14px */
+  height: 0.875rem; /* 14px */
+  background: hsl(169, 82%, 27%);
+  border-radius: 50%;
+}
+
+/* Styling for checked radio button labels */
+.general-label:has(input:checked),
+.support-label:has(input:checked) {
+  background-color: hsl(148, 38%, 91%);
+  border: 1px solid hsl(169, 82%, 27%);
+}
+
+/* Custom checkbox styling */
+.consent-input {
+  accent-color: hsl(169, 82%, 27%);
+  cursor: pointer;
+}
+
+/* Hover states for inputs */
+.first-input:hover,
+.last-input:hover,
+.email-input:hover,
+.message-input:hover {
+    border: 1px solid hsl(169, 82%, 27%);
+}
+
+/* Success message styles */
+.message-sent {
+    position: absolute;
+    background-color: hsl(187, 24%, 22%);
+    top: 1.5rem; /* 24px */
+    color: white;
+    padding: 1.5rem 1.5625rem 1.6875rem; /* 24px 25px 27px */
+    border-radius: 1rem; /* 16px */
+    display: flex;
+    gap: 1rem; /* 16px */
+    flex-direction: column;
+}
+
+/* Success message header */
+.head-sent {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 0.5rem; /* 8px */
+}
+
+/* Success message heading */
+.sent-para {
+    font-weight: 700;
+    width: fit-content;
+    font-size: 1.125rem; /* 18px */
+}
+
+/* Utility class for hiding elements */
+.hidden {
+    display: none;
+}
+
+/* Mobile responsive styles */
+@media (max-width: 50rem) { /* 800px */
+    body {
+        padding: 2rem 1rem; /* 32px 16px */
+    }
+    main {
+        padding: 1.5rem; /* 24px */
+    }
+    .first-last-div,
+    .radio-option {
+        display: flex;
+        flex-direction: column;
+    }
+    .message-input {
+        height: 15rem; /* 240px */
+    }
+    .submit-button {
+        font-size: 1.125rem; /* 18px */
+    }
+    .message-sent {
+        width: 21.25rem; /* 340px */
+    }
+}

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Basic meta tags -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="index.css">
+
+  <!-- Google Fonts - Consider loading only the weights you actually use -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Inconsolata:wght@200..900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Karla:ital,wght@0,200..800;1,200..800&family=Libre+Franklin:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+  
+  <title>Contact form</title>
+</head>
+<body>
+  <main>
+    <!-- Contact form header -->
+    <p class="contact-para">
+      Contact Us
+    </p>
+    
+    <!-- Main contact form -->
+    <form class="js-form">
+      <!-- Name fields container -->
+      <div class="first-last-div">
+        <!-- First name field -->
+        <div class="first-div">
+          <label for="first-name" class="first-label">
+            First Name <span class="required-star">*</span>
+          </label>
+          <input type="text" name="first-name" id="first-name" class="first-input js-first-input" aria-required="true">
+          <p class="warn-first js-warn-first" role="alert">
+            This field is required
+          </p>
+        </div>
+        
+        <!-- Last name field -->
+        <div class="last-div">
+          <label for="last-name" class="last-label">
+            Last Name <span class="required-star">*</span>
+          </label>
+          <input type="text" name="last-name" id="last-name" class="last-input js-last-input" aria-required="true">
+          <p class="warn-last js-warn-last" role="alert">
+            This field is required
+          </p>
+        </div>
+      </div>
+      
+      <!-- Email field -->
+      <div class="email-div">
+          <label for="email-address" class="email-label">
+            Email Address <span class="required-star">*</span>
+          </label>
+          <input type="email" name="email-address" id="email-address" class="email-input js-email-input" aria-required="true">
+          <p class="warn-email js-warn-email" role="alert">
+            Please enter a valid email address
+          </p>
+      </div>
+      
+      <!-- Query type radio buttons -->
+      <div class="query-type-div">
+        <legend class="query-label">
+          Query Type <span class="required-star">*</span>
+        </legend>
+        <div class="radio-option" role="radiogroup">
+          <label class="general-label">
+            <input type="radio" name="Query-Type" value="General Enquiry" class="general-input" aria-required="true">
+            <span>General Enquiry</span>
+          </label>
+          <label class="support-label">
+            <input type="radio" name="Query-Type" value="Support Request" class="support-input" aria-required="true">
+            <span>Support Request</span>
+          </label>
+        </div>
+        <p class="warn-query js-warn-query" role="alert">
+          Please select a query type
+        </p>
+      </div>
+      
+      <!-- Message textarea -->
+      <div class="message-div">
+          <label for="message" class="meassge-label">
+            Message <span class="required-star">*</span>
+          </label>
+          <textarea id="message" name="message" rows="4" class="message-input js-message-input" aria-required="true"></textarea>
+          <p class="warn-message js-warn-message" role="alert">
+            This field is required
+          </p>
+      </div>
+      
+      <!-- Consent checkbox -->
+      <div class="consent-div">
+        <label for="consent" class="consent-label">
+          <input type="checkbox" name="consent" id="consent" class="consent-input" aria-required="true">
+          I consent to being contacted by the team
+        </label>
+        <p class="warn-consent js-warn-consent" role="alert">
+          To submit this form, please consent to being contacted
+        </p>
+      </div>
+      
+      <!-- Submit button -->
+      <button class="submit-button" type="submit">
+        Submit
+      </button>
+    </form>  
+  </main>
+  
+  <!-- Success message (hidden by default) -->
+  <div class="message-sent js-message-sent hidden" role="status" aria-live="polite">
+    <div class="head-sent">
+      <img src="assets/images/icon-success-check.svg" alt="Success checkmark icon">
+      <p class="sent-para">
+        Message Sent!
+      </p>
+    </div>
+    <p>
+      Thanks for completing the form. We'll be in touch soon!
+    </p>
+  </div>
+  
+  <!-- JavaScript -->
+  <script type="module" src="index.js"></script>
+</body>
+</html>
